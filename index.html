@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="flex p-4 bg-white w-full h-screen gap-10 ">
+  <!-- Sidebar start -->
+  <aside class="w-1/5 bg-blue-500 rounded-lg p-10 flex flex-col gap-10 text-white uppercase">
+    
+    <!-- Bototnes de guia-->
+    <div class="flex gap-2 ">
+      <div id="divStep1" class="w-10 h-10 rounded-full border border-sky-100 grid place-content-center bg-sky-100">
+        <p id="step1" class="text-sky-800 font-bold">1</p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-300">Step 1</p>
+        <p class="font-bold">Your info</p>
+      </div>
+    </div>
+
+    <div class="flex gap-2 ">
+      <div id="divStep2" class="w-10 h-10 rounded-full border border-sky-100 grid place-content-center">
+        <p id="step2" class=" font-bold">2</p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-300">Step 2</p>
+        <p class="font-bold">Select Plan</p>
+      </div>
+    </div>
+
+    <div class="flex gap-2 ">
+      <div id="divStep3" class="w-10 h-10 rounded-full border border-sky-100 grid place-content-center">
+        <p id="step3" class="font-bold">3</p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-300">Step 3</p>
+        <p class="font-bold">Add-ons</p>
+      </div>
+    </div>
+
+    <div class="flex gap-2 ">
+      <div id="divStep4" class="w-10 h-10 rounded-full border border-sky-100 grid place-content-center ">
+        <p id="step4" class=" font-bold">4</p>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-300">Step 4</p>
+        <p class="font-bold">Summary</p>
+      </div>
+    </div>
+
+
+  </aside>
+  <!-- Sidebar end -->
+  
+  <div class="w-4/5 px-20">
+
+  <!-- Step 1 start -->
+  <section id="section-1" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative">
+
+    <p class="text-2xl font-bold text-sky-800 mb-1">Personal info</p>
+    <p class="text-gray-400 text-lg mb-10">Please provide your name, email address, and phone number.</p>
+
+    <form>
+      <div class="flex flex-col gap-1 mb-6">
+        <label class="text-sm font-bold text-sky-700" for="name">Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          id="name" 
+          placeholder="e.g. Stephen King"
+          class="p-4 outline-none rounded-lg border border-stone-200">
+      </div>
+    
+      <div class="flex flex-col gap-1 mb-6">
+        <label class="text-sm font-bold text-sky-700" for="email">Email Address</label>
+        <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          placeholder="e.g. stephenking@lorem.com"
+          class="p-4 outline-none rounded-lg border border-stone-200 ">
+      </div>
+  
+      <div class="flex flex-col gap-1 mb-6">
+        <label class="text-sm font-bold text-sky-700" for="number">Phone Number</label>
+        <input 
+          type="number" 
+          name="number" 
+          id="number" 
+          placeholder="e.g. +1 234 567 890"
+          class="p-4 outline-none rounded-lg border border-stone-200">
+      </div>
+      
+      <button
+      type="submit"
+      id='btn-next1'
+      class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg lg:absolute lg:bottom-10 lg:right-0"
+      >Next Step</button>
+    </form>
+  </section>
+  <!-- Step 1 end -->
+
+  <!-- Step 2 start -->
+  <section id="section-2" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
+
+    <p class="text-2xl font-bold text-sky-800 mb-1">Select your plan</p>
+    <p class="text-gray-400 text-lg mb-10">You have the option of monthly or yearly billing.</p>
+    
+    <!-- cards -->
+    <div class="flex gap-3 ">
+      <div id="card-select" class="flex flex-col gap-8 p-5 border border-stone-200 rounded-lg w-[150px] hover:cursor-pointer hover:border-indigo-500">
+        <div class="w-8 h-8 rounded-full bg-orange-200"></div>
+        <div>
+          <p class="font-bold text-sky-800">Arcade</p>
+          <p id="text-plan1" class="text-sm text-gray-500">$9/mo</p>
+          <p id="free1" class="text-[12px] text-sky-800 font-bold hidden">2 months free</p>
+        </div>
+      </div>
+
+      <div id="card-select" class="flex flex-col gap-8 p-5 border border-stone-200 rounded-lg w-[150px] hover:cursor-pointer hover:border-indigo-500">
+        <div class="w-8 h-8 rounded-full bg-red-200"></div>
+        <div>
+          <p class="font-bold text-sky-800">Advanced</p>
+          <p id="text-plan2" class="text-sm text-gray-500">$12/mo</p>
+          <p id="free2" class="text-[12px] text-sky-800 font-bold hidden">2 months free</p>
+        </div>
+      </div>
+
+      <div id="card-select" class="flex flex-col gap-8 p-5 border border-stone-200 rounded-lg w-[150px] hover:cursor-pointer hover:border-indigo-500">
+        <div class="w-8 h-8 rounded-full bg-blue-200"></div>
+        <div>
+          <p class="font-bold text-sky-800">Pro</p>
+          <p id="text-plan3" class="text-sm text-gray-500">$15/mo</p>
+          <p id="free3" class="text-[12px] text-sky-800 font-bold hidden">2 months free</p>
+        </div>
+      </div>    
+    </div>
+    <!-- fin cards -->
+
+    <div class="mt-5 p-3 rounded-lg w-4/5 bg-gray-100 text-stone-500 flex">
+      <div class="flex gap-4 mx-auto">
+        <p id="pago-mes" class="font-bold text-sky-700 text-sm">Mounthly</p>
+        <label class="switch">
+          <input id="check-pago" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <p id="pago-año" class="text-sm">Yearly</p>
+      </div>
+    </div>
+
+    <!-- direccion -->
+    <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
+      <p id="goBack1" class="text-gray-500 font-bold hover:cursor-pointer">Go Back</p>
+      <button
+        id='btn-next2'
+        class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg "
+      >Next Step</button>
+    </div>
+
+  </section>
+
+  <!-- Step 2 end -->
+
+  <!-- Step 3 start -->
+
+  <section id="section-3" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
+
+    <p class="text-2xl font-bold text-sky-800 mb-1">Pick add-ons</p>
+    <p class="text-gray-400 text-lg mb-10">Add-ons help enhance your gaming experience.</p>
+
+    <div class="flex flex-col gap-3">
+      <!-- options -->
+      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500 adicion" >
+          <div class="w-1/6 ml-10">
+            <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
+          </div>
+          <div class="w-4/6 -ml-10">
+            <p class="font-bold text-sky-800">Online service</p>
+            <p class="text-stone-400 text-sm">Access to multiplayer games</p>
+          </div>
+          <p id="adition-1" class="w-1/6 text-sky-600">+$1/mo</p>
+
+      </div>
+
+      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500 adicion"  >
+        <div class="w-1/6 ml-10">
+          <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
+        </div>
+        <div class="w-4/6 -ml-10">
+          <p class="font-bold text-sky-800">Larger storage</p>
+          <p class="text-stone-400 text-sm">Extra 1TB of cloud save</p>
+        </div>
+        <p id="adition-2" class="w-1/6 text-sky-600">+$2/mo</p>
+      </div>
+
+      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500  adicion" >
+        <div class="w-1/6 ml-10">
+          <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
+        </div>
+        <div class="w-4/6 -ml-10">
+          <p class="font-bold text-sky-800">Customizable Profile</p>
+          <p class="text-stone-400 text-sm">Custom theme on your profile</p>
+        </div>
+        <p id="adition-3" class="w-1/6 text-sky-600">+$2/mo</p>
+      </div>
+
+    </div>
+
+    <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
+      <p id="goBack2" class="text-gray-500 font-bold hover:cursor-pointer">Go Back</p>
+      <button
+        id='btn-next3'
+        class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg "
+      >Next Step</button>
+    </div>
+  </section>
+
+
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+  <section id="section-4" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
+    <p class="text-2xl font-bold text-sky-800 mb-1">Finishing up</p>
+    <p class="text-gray-400 text-lg mb-10">Double-check everything looks OK before confirming.</p>
+
+    <div class="p-5 bg-sky-50 rounded-lg">
+      <div class="flex justify-between items-center">
+        <div class="flex flex-col">
+          <p id="name-plan" class="font-bold text-sky-800"></p>
+          <p id="change-form-pay" class="text-gray-500 hover:cursor-pointer">Change</p>
+        </div>
+        <p id="valor-plan-final" class="font-bold text-sky-800"></p>
+      </div>
+
+      <!-- Linea separadora -->
+      <div class="border w-full my-5"></div>
+
+      <!-- Dynamically add subscription and add-on selections here -->
+      <div id="aditionals-div" class="flex flex-col gap-3">
+        
+  
+        <!-- <div class="flex justify-between">
+          <p class="text-sm text-gray-400">Larger storage</p>
+          <p class=" text-sm text-sky-800">+$2/mo</p>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Total (per month/year) -->
+    <div class="w-5/6 mx-auto mt-5">
+      <div class="flex justify-between">
+        <p id="text-total" class=" text-gray-400"></p>
+        <p id="total-pay" class="text-lg text-blue-800 font-bold "></p>
+      </div>
+    </div>
+    <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
+      <p id="goBack3" class="text-gray-500 font-bold hover:cursor-pointer">Go Back</p>
+      <button
+        id='btn-confirm'
+        class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg "
+      >Confirm</button>
+    </div>
+  </section>
+
+
+
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+  <section id="section-5" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+
+      <div class="w-16 h-16 rounded-full bg-red-300 grid place-content-center shadow">
+        <div class="w-8 h-8 rounded-full bg-white grid place-content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-800 font-bold">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          
+        </div>
+      </div>
+
+      <h2 class="my-8 text-3xl font-bold text-sky-800">Thank you!</h2>
+
+      <p class="text-gray-400 text-center w-3/4 mx-auto">
+        Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.
+      </p>
+    </div>
+  </section>
+  <!-- 
+
+   -->
+
+  <!-- Step 5 end -->
+</div>
+
+  </main>
+  <script src="./src//conexciones.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
