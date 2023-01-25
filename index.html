@@ -107,14 +107,14 @@
       <button
       type="submit"
       id='btn-next1'
-      class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg absolute bottom-5 md:bottom-10 right-5 md:right-0"
+      class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg absolute bottom-5 md:bottom-10 right-5 md:mr-20"
       >Next Step</button>
     </form>
   </section>
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-  <section id="section-2" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border">
+  <section id="section-2" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border hidden">
     <div class="w-full p-5 md:p-0 lg:max-w-xl lg:mx-auto h-full md:py-10">
 
       <p class="text-2xl font-bold text-sky-800 mb-1">Select your plan</p>
@@ -166,14 +166,13 @@
     </div>
 
     <!-- direccion -->
-    <div class="w-full flex justify-between items-center absolute -bottom-20 md:w-4/5 md:static md:bottom-0 md:mx-auto lg:max-w-xl">
+    <div class="w-full md:mb-0 flex justify-between items-center absolute -bottom-20 md:mx-auto lg:max-w-xl">
       <p id="goBack1" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
       <button
         id='btn-next2'
         class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end lg:mr-20"
       >Next Step</button>
     </div>
-  <!-- </div> -->
 
   </section>
 
@@ -181,56 +180,58 @@
 
   <!-- Step 3 start -->
 
-  <section id="section-3" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
+  <section id="section-3" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border">
+    <div class="w-full p-5 md:p-0 lg:max-w-xl lg:mx-auto h-full md:py-10">
 
-    <p class="text-2xl font-bold text-sky-800 mb-1">Pick add-ons</p>
-    <p class="text-gray-400 text-lg mb-10">Add-ons help enhance your gaming experience.</p>
+      <p class="text-2xl font-bold text-sky-800 mb-1">Pick add-ons</p>
+      <p class="text-gray-400 text-lg mb-6 md:mb-10">Add-ons help enhance your gaming experience.</p>
 
-    <div class="flex flex-col gap-3">
-      <!-- options -->
-      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500 adicion" >
-          <div class="w-1/6 ml-10">
+      <div class="flex flex-col gap-5">
+        <!-- options -->
+        <div class="w-full flex items-center border border-stone-200 rounded-lg p-3 md:p-5 hover:cursor-pointer         hover:border-indigo-500 adicion gap-2 md:gap-0" >
+          <div class="w-1/12 md:w-1/6 md:ml-10">
             <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
           </div>
-          <div class="w-4/6 -ml-10">
+          <div class="w-7/12 md:w-4/6 md:-ml-10">
             <p class="font-bold text-sky-800">Online service</p>
             <p class="text-stone-400 text-sm">Access to multiplayer games</p>
           </div>
-          <p id="adition-1" class="w-1/6 text-sky-600">+$1/mo</p>
+          <p id="adition-1" class="w-3/12 md:w-1/6 text-sky-600">+$1/mo</p>
+        </div>
 
+        <div class="w-full flex items-center border border-stone-200 rounded-lg p-3 md:p-5 hover:cursor-pointer hover:border-indigo-500 adicion gap-2 md:gap-0">
+          <div class="w-1/12 md:w-1/6 md:ml-10">
+            <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
+          </div>
+          <div class="w-7/12 md:w-4/6 md:-ml-10">
+            <p class="font-bold text-sky-800">Larger storage</p>
+            <p class="text-stone-400 text-sm">Extra 1TB of cloud save</p>
+          </div>
+          <p id="adition-2" class="w-3/12 md:w-1/6 text-sky-600">+$2/mo</p>
+        </div>
+
+        <div class="w-full flex items-center border border-stone-200 rounded-lg p-3 md:p-5 hover:cursor-pointer hover:border-indigo-500  adicion gap-2 md:gap-0">
+          <div class="w-1/12 md:w-1/6 md:ml-10">
+            <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
+          </div>
+          <div class="w-7/12 md:w-4/6 md:-ml-10">
+            <p class="font-bold text-sky-800">Customizable Profile</p>
+            <p class="text-stone-400 text-sm">Custom theme on your profile</p>
+          </div>
+          <p id="adition-3" class="w-3/12 md:w-1/6 text-sky-600">+$2/mo</p>
+        </div>
       </div>
-
-      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500 adicion"  >
-        <div class="w-1/6 ml-10">
-          <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
-        </div>
-        <div class="w-4/6 -ml-10">
-          <p class="font-bold text-sky-800">Larger storage</p>
-          <p class="text-stone-400 text-sm">Extra 1TB of cloud save</p>
-        </div>
-        <p id="adition-2" class="w-1/6 text-sky-600">+$2/mo</p>
-      </div>
-
-      <div class="w-full flex items-center border border-stone-200 rounded-lg p-5 hover:cursor-pointer hover:border-indigo-500  adicion" >
-        <div class="w-1/6 ml-10">
-          <input type="checkbox" name="" id="" class="w-4 h-4 hover:cursor-pointer">
-        </div>
-        <div class="w-4/6 -ml-10">
-          <p class="font-bold text-sky-800">Customizable Profile</p>
-          <p class="text-stone-400 text-sm">Custom theme on your profile</p>
-        </div>
-        <p id="adition-3" class="w-1/6 text-sky-600">+$2/mo</p>
-      </div>
-
     </div>
 
-    <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
-      <p id="goBack2" class="text-gray-500 font-bold hover:cursor-pointer">Go Back</p>
+    <!-- direccion -->
+    <div class="w-full flex justify-between items-center absolute -bottom-20 md:mx-auto lg:max-w-xl">
+      <p id="goBack2" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
       <button
         id='btn-next3'
-        class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg "
+        class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end lg:mr-20"
       >Next Step</button>
     </div>
+
   </section>
 
 
