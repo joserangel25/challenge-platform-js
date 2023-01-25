@@ -103,24 +103,23 @@
           placeholder="e.g. +1 234 567 890"
           class="p-4 outline-none rounded-lg border border-stone-200">
       </div>
-      
+ 
       <button
       type="submit"
       id='btn-next1'
-      class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg absolute bottom-5 md:bottom-10 right-5 md:mr-20"
+      class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg absolute bottom-5 md:bottom-10 right-5 md:right-0"
       >Next Step</button>
     </form>
   </section>
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-  <section id="section-2" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border hidden">
+  <section id="section-2" class="-mt-20 md:mt-0 bg-white relative rounded-lg box-border hidden">
     <div class="w-full p-5 md:p-0 lg:max-w-xl lg:mx-auto h-full md:py-10">
 
       <p class="text-2xl font-bold text-sky-800 mb-1">Select your plan</p>
       <p class="text-gray-400 text-lg mb-6 md:mb-10">You have the option of monthly or yearly billing.</p>
-      
-      <!-- <div class="w-full relative"> -->
+
       <!-- cards -->
       <div class="flex flex-col md:flex-row gap-3">
         <div id="card-select" class="flex md:flex-col gap-4 md:gap-8 p-3 md:p-5 border border-stone-200 rounded-lg w-full md:w-[150px] hover:cursor-pointer hover:border-indigo-500">
@@ -164,23 +163,20 @@
       </div>
 
     </div>
-
     <!-- direccion -->
-    <div class="w-full md:mb-0 flex justify-between items-center absolute -bottom-20 md:mx-auto lg:max-w-xl">
-      <p id="goBack1" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
-      <button
-        id='btn-next2'
-        class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end lg:mr-20"
-      >Next Step</button>
-    </div>
-
+      <div class="absolute bg-red-50 flex w-full justify-between items-center -bottom-20 md:w-4/5 md:static md:mx-auto md:max-w-xl">
+        <p id="goBack1" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
+        <button
+          id='btn-next2'
+          class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end"
+        >Next Step</button>
+      </div>
   </section>
-
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
 
-  <section id="section-3" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border">
+  <section id="section-3" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border hidden">
     <div class="w-full p-5 md:p-0 lg:max-w-xl lg:mx-auto h-full md:py-10">
 
       <p class="text-2xl font-bold text-sky-800 mb-1">Pick add-ons</p>
@@ -224,62 +220,72 @@
     </div>
 
     <!-- direccion -->
-    <div class="w-full flex justify-between items-center absolute -bottom-20 md:mx-auto lg:max-w-xl">
+    <div class="absolute bg-red-50 flex w-full justify-between items-center -bottom-20 md:w-4/5 md:static md:mx-auto md:max-w-xl">
       <p id="goBack2" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
       <button
         id='btn-next3'
-        class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end lg:mr-20"
+        class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end"
       >Next Step</button>
     </div>
-
   </section>
 
 
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-  <section id="section-4" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative hidden">
-    <p class="text-2xl font-bold text-sky-800 mb-1">Finishing up</p>
-    <p class="text-gray-400 text-lg mb-10">Double-check everything looks OK before confirming.</p>
+  <section id="section-4" class="-mt-20 md:mt-0 relative bg-white rounded-lg box-border">
+    <div class="w-full p-5 md:p-0 lg:max-w-xl lg:mx-auto md:py-10">
+      <p class="text-2xl font-bold text-sky-800 mb-1">Finishing up</p>
+      <p class="text-gray-400 text-lg mb-6 md:mb-10">Double-check everything looks OK before confirming.</p>
 
-    <div class="p-5 bg-sky-50 rounded-lg">
-      <div class="flex justify-between items-center">
-        <div class="flex flex-col">
-          <p id="name-plan" class="font-bold text-sky-800"></p>
-          <p id="change-form-pay" class="text-gray-500 hover:cursor-pointer">Change</p>
+      <div class="p-5 bg-sky-50 rounded-lg">
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <p id="name-plan" class="font-bold text-sky-800"></p>
+            <p id="change-form-pay" class="text-gray-500 hover:cursor-pointer">Change</p>
+          </div>
+          <p id="valor-plan-final" class="font-bold text-sky-800"></p>
         </div>
-        <p id="valor-plan-final" class="font-bold text-sky-800"></p>
+
+        <!-- Linea separadora -->
+        <div class="border w-full my-5"></div>
+
+        <!-- Dynamically add subscription and add-on selections here -->
+        <div id="aditionals-div" class="flex flex-col gap-3">
+
+          <!-- <div class="flex justify-between">
+            <p class="text-sm text-gray-400">Larger storage</p>
+            <p class=" text-sm text-sky-800">+$2/mo</p>
+          </div> -->
+        </div>
       </div>
 
-      <!-- Linea separadora -->
-      <div class="border w-full my-5"></div>
-
-      <!-- Dynamically add subscription and add-on selections here -->
-      <div id="aditionals-div" class="flex flex-col gap-3">
-        
-  
-        <!-- <div class="flex justify-between">
-          <p class="text-sm text-gray-400">Larger storage</p>
-          <p class=" text-sm text-sky-800">+$2/mo</p>
-        </div> -->
-      </div>
-    </div>
-
-    <!-- Total (per month/year) -->
-    <div class="w-5/6 mx-auto mt-5">
-      <div class="flex justify-between">
-        <p id="text-total" class=" text-gray-400"></p>
-        <p id="total-pay" class="text-lg text-blue-800 font-bold "></p>
+      <!-- Total (per month/year) -->
+      <div class="w-5/6 mx-auto mt-5">
+        <div class="flex justify-between">
+          <p id="text-total" class=" text-gray-400"></p>
+          <p id="total-pay" class="text-lg text-blue-800 font-bold "></p>
+        </div>
       </div>
     </div>
-    <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
+    
+      <!-- direccion -->
+      <div class="absolute bg-red-50 flex w-full justify-between items-center -bottom-20 md:w-4/5 md:static md:mx-auto md:max-w-xl">
+        <p id="goBack3" class="text-gray-500 font-bold hover:cursor-pointer ml-2">Go Back</p>
+        <button
+        id='btn-confirm'
+        class="py-3 px-8 bg-sky-800 text-white text-center rounded-lg justify-self-end"
+        >Confirm</button>
+      </div>
+      
+    <!-- <div class="flex w-full justify-between items-center lg:absolute lg:bottom-10">
       <p id="goBack3" class="text-gray-500 font-bold hover:cursor-pointer">Go Back</p>
       <button
         id='btn-confirm'
         class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg "
       >Confirm</button>
-    </div>
-  </section>
+    </div> -->
+  </section>    
 
 
 
