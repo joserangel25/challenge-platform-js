@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="flex p-4 bg-white w-full h-screen gap-10 ">
+  <main class="md:p-4 bg-white w-full h-screen md:flex md:gap-10 ">
   <!-- Sidebar start -->
-  <aside class="w-1/5 bg-blue-500 rounded-lg p-10 flex flex-col gap-10 text-white uppercase">
+  <aside class="md:w-1/5 h-[180px] md:h-full bg-blue-500 md:rounded-lg p-10 flex justify-center md:justify-start md:flex-col gap-4 md:gap-10 text-white uppercase">
     
     <!-- Bototnes de guia-->
     <div class="flex gap-2 ">
@@ -22,7 +22,7 @@
         <p id="step1" class="text-sky-800 font-bold">1</p>
       </div>
 
-      <div>
+      <div class="hidden md:block">
         <p class="text-sm text-gray-300">Step 1</p>
         <p class="font-bold">Your info</p>
       </div>
@@ -33,7 +33,7 @@
         <p id="step2" class=" font-bold">2</p>
       </div>
 
-      <div>
+      <div class="hidden md:block">
         <p class="text-sm text-gray-300">Step 2</p>
         <p class="font-bold">Select Plan</p>
       </div>
@@ -44,7 +44,7 @@
         <p id="step3" class="font-bold">3</p>
       </div>
 
-      <div>
+      <div class="hidden md:block">
         <p class="text-sm text-gray-300">Step 3</p>
         <p class="font-bold">Add-ons</p>
       </div>
@@ -55,7 +55,7 @@
         <p id="step4" class=" font-bold">4</p>
       </div>
 
-      <div>
+      <div class="hidden md:block">
         <p class="text-sm text-gray-300">Step 4</p>
         <p class="font-bold">Summary</p>
       </div>
@@ -65,16 +65,16 @@
   </aside>
   <!-- Sidebar end -->
   
-  <div class="w-4/5 px-20">
+  <div class="w-screen p-4 md:w-4/5 md:px-20 bg-blue-50 md:bg-white">
 
   <!-- Step 1 start -->
-  <section id="section-1" class="lg:max-w-xl lg:mx-auto h-full py-10 lg:relative">
+  <section id="section-1" class="w-full p-5 md:p-0 -mt-20 md:mt-0 rounded-lg bg-white  lg:max-w-xl lg:mx-auto h-full md:py-10 lg:relative">
 
     <p class="text-2xl font-bold text-sky-800 mb-1">Personal info</p>
-    <p class="text-gray-400 text-lg mb-10">Please provide your name, email address, and phone number.</p>
+    <p class="text-gray-400 text-lg mb-6 md:mb-10">Please provide your name, email address, and phone number.</p>
 
-    <form>
-      <div class="flex flex-col gap-1 mb-6">
+    <form class="">
+      <div class="flex flex-col gap-1 mb-3 md:mb-6">
         <label class="text-sm font-bold text-sky-700" for="name">Name</label>
         <input 
           type="text" 
@@ -84,7 +84,7 @@
           class="p-4 outline-none rounded-lg border border-stone-200">
       </div>
     
-      <div class="flex flex-col gap-1 mb-6">
+      <div class="flex flex-col gap-1 mb-3 md:mb-6">
         <label class="text-sm font-bold text-sky-700" for="email">Email Address</label>
         <input 
           type="email" 
@@ -94,7 +94,7 @@
           class="p-4 outline-none rounded-lg border border-stone-200 ">
       </div>
   
-      <div class="flex flex-col gap-1 mb-6">
+      <div class="flex flex-col gap-1 mb-3 md:mb-6">
         <label class="text-sm font-bold text-sky-700" for="number">Phone Number</label>
         <input 
           type="number" 
@@ -107,7 +107,7 @@
       <button
       type="submit"
       id='btn-next1'
-      class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg lg:absolute lg:bottom-10 lg:right-0"
+      class="py-3 px-8 bg-sky-700 text-white text-center rounded-lg absolute bottom-5 md:bottom-10 right-5 md:right-0"
       >Next Step</button>
     </form>
   </section>
