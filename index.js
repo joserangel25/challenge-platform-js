@@ -226,7 +226,14 @@ btnReset.addEventListener('click', () => {
   inputPhoneNumber.value = ''
   console.log('resset')
   section5.classList.add('hidden')
-  section1.classList.remove('hidden') 
+  section1.classList.remove('hidden')
+  
+  divStep4.classList.remove('bg-sky-100')
+  step4.classList.remove('text-sky-800')
+
+  divStep1.classList.add('bg-sky-100')
+  step1.classList.add('text-sky-800')
+  
 })
 
 //btn ssection 4, for change of pay form
