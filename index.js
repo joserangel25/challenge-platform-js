@@ -45,21 +45,6 @@ const aditionalsBeneficios = [
 ]
 
 
-formClient.addEventListener('submit', (e) => {
-  e.preventDefault()
-
-  const isOk = validateInputs('validar')
-  if(!isOk) return
-  section1.style.display = 'none'
-  section2.classList.remove('hidden')
-
-  divStep1.classList.remove('bg-sky-100')
-  step1.classList.remove('text-sky-800')
-
-  divStep2.classList.add('bg-sky-100')
-  step2.classList.add('text-sky-800')
-})
-
 //Selección del plan - arcade / advance / pro
 let select = []; 
 cardOptions.forEach((card, ind) => {
@@ -78,6 +63,18 @@ cardOptions.forEach((card, ind) => {
 
 //buttons
 const btnNext1 = document.querySelector('#btn-next1');
+btnNext1.addEventListener('click', () => {
+  const isOk = validateInputs('validar')
+  if(!isOk) return
+  section1.classList.add('hidden')
+  section2.classList.remove('hidden')
+
+  divStep1.classList.remove('bg-sky-100')
+  step1.classList.remove('text-sky-800')
+
+  divStep2.classList.add('bg-sky-100')
+  step2.classList.add('text-sky-800')
+})
 // ahora el btnNext1 se hace a través del submit del form
 
 const goBack1 = document.querySelector('#goBack1')
@@ -218,10 +215,18 @@ aditionsOptions.forEach((div, ind) => {
 
 const sumarTotal = (arr) => arr.reduce((a, b) => a + b, 0)
 
-const btnConfirm = document.querySelector('#btn-confirm');
 btnConfirm.addEventListener('click', () => {
   section4.classList.add('hidden')
   section5.classList.remove('hidden')
+})
+
+btnReset.addEventListener('click', () => {
+  inputName.value = ''
+  inputEmail.value = ''
+  inputPhoneNumber.value = ''
+  console.log('resset')
+  section5.classList.add('hidden')
+  section1.classList.remove('hidden') 
 })
 
 //btn ssection 4, for change of pay form
@@ -258,6 +263,9 @@ function validateInputs(type){
       if(inp.value === ''){
         inp.classList.add('border-red-500')
         ok = false
+        setTimeout(() => {
+          inp.classList.remove('border-red-500')
+        }, 1500)
         return
       } else {
         inp.classList.remove('border-red-500')

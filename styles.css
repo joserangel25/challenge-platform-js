@@ -60,3 +60,9 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+aside {
+  background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

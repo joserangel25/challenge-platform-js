@@ -54,3 +54,6 @@ const changeFormPay = document.querySelector('#change-form-pay');
 const totalPayHtml = document.querySelector('#total-pay')
 const textTotal = document.querySelector('#text-total')
 const aditionalsDiv = document.querySelector('#aditionals-div');
+
+const btnConfirm = document.querySelector('#btn-confirm');
+const btnReset = document.querySelector('#btn-reset');
